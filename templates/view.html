@@ -1,0 +1,19 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <title> data </title>
+  <meta charset="utf-8" />
+</head>
+<body>
+    <div>
+      <h1>Stock data</h1>
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  {% endfor %}
+
+    <h1>chart</h1>
+    <img src="{{image}}" alt="Chart"/>
+</div>
+</body>
+</html>
