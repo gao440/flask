@@ -16,7 +16,7 @@ app = Flask (__name__)
 
 @app.route("/")
 def main():
-    hosturl = "http://127.0.0.1:5000"
+    hosturl = "https://stockw.herokuapp.com"
     return render_template("mainpage.html", host=hosturl)
 
 @app.route("/tables", methods=['GET', 'POST'])
